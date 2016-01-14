@@ -1,0 +1,17 @@
+#+TITLE: Bonus Exercises
+
+** About
+
+This repo contains a number of bonus exercises that I'll be putting together for
+new JS programmers.
+
+Each set of exercises will focus on synthesizing a few ideas.
+
+** Problem Sets
+
++ [[set-one.js][Set One]]: Basic functions, iteration and accumulation.
+
+** Instructions
+
+Either clone, fork and clone, or download this repo, open =index.html= and hack
+away!
