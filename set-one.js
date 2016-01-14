@@ -1,6 +1,3 @@
-// Let's practice writing some functions! This set covers some basic functions
-// and some slightly more advanced ones involving arrays.
-
 // =============================================================================
 // 1. Write a function 'max' that takes two numbers and returns the largest one.
 // =============================================================================
