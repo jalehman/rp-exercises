@@ -14,4 +14,4 @@ Each set of exercises will focus on synthesizing a few ideas.
 ** Instructions
 
 Either clone, fork and clone, or download this repo, open =index.html= and hack
-away!
+away! The exercises themselves are in =.js= files.
