@@ -1,0 +1,115 @@
+* Problem Set One
+
+** Helpers
+
+#+begin_src js
+function randInt(number) {
+  return Math.floor(Math.random() * (number + 1));
+}
+#+end_src
+
+** Problems
+
+*** 1. Doge Speak
+
+Write a function called ~dogeSpeak~ that takes an array of words, and converts
+them to sentences in "Doge Speak" (for more info on the /doge/, see
+http://knowyourmeme.com/memes/doge). Each word in the input array should be
+prefixed with a random word from the ~dogeWords~ array below (and capitalized)
+and followed with a period. All of the resulting sentences should be turned into
+one string (hint: /joined/), and then ended with the sentence "Wow."
+
+#+begin_src js
+  var dogeWords = ["much", "very", "so", "such", "nice"];
+
+
+  dogeSpeak(["Sublime Text", "JavaScript", "arrays"]);
+  // => "Much Sublime Text. So JavaScript. Very arrays. Wow."
+  dogeSpeak(["functions", "powerful", "coffee", "scope", "understanding"])
+  // => "Nice functions. Much coffee. Such understanding. So powerful. Wow."
+#+end_src
+
+*Challenge*: Implement the function such that none of the dogeWords are
+repeated, and if there are more words in the input array than dogeWords, pick
+random words from the input until there are no more dogeWords. The output should
+still end in "Wow."
+
+*** 2. Obfuscate a String
+
+In this problem, you are going to write a function called ~obfuscate~ that
+accepts a string as a parameter, and returns an /obfuscated/ version of that
+string (so that it's hard to read).
+
+The way that this function should work is as follows:
+
++ For each letter (/l/) in the input string, generate an obfuscated version of that letter by:
+  + Generating a random number (/n/) between =1= and =5=
+  + Generating /n/ random characters (/chars/)
+  + The obfuscated version of /l/ is now created by concatenating /n/, /chars/,
+    and /l/ in that order.
+
+For example:
+
+#+begin_src js
+obfuscate("dog"); // => "1fd3uxbo2qdg"
+obfuscate("dog"); // => "4ncvad1bo3gplg""
+#+end_src
+
+*** 3. Deobfuscate a String (depends on problem 2)
+
+The ~obfuscate~ function that you wrote above takes an unobfuscated string and
+obfuscates it -- now, write a ~deobfuscate~ function that outputs the original
+string, /e.g./:
+
+#+begin_src js
+deobfuscate("1fd3uxbo2qdg"); // => "dog"
+deobfuscate("4ncvad1bo3gplg"); // => "dog"
+#+end_src
+
+*** 4. Finding First-Names
+
+Let's say that we have an array of names represented as strings that look like this:
+
+#+begin_src js
+  var names = [
+    "John Q Public",
+    "Admiral General Grace Murray Hopper",
+    "Spot",
+    "Aristotle",
+    "Lord Bertrand Russell",
+    "Sir Laurence Olivier",
+    "Admiral William Adama",
+    "Annyeong",
+    "Miss Scarlet"
+  ];
+#+end_src
+
+Your goal is to produce an array of just the first names of each of the above
+entities; however, there's a catch: titles should not be included. A title is
+some prefix that comes before a person's name, e.g. Admiral, General, Lord, etc.
+*For now, it is safe to assume that the titles in the above names are the only
+titles that we'll have to deal with.*
+
+You may want to first consider the problem of getting the first name of one name
+at a time, e.g. a function called firstName that works like this:
+
+#+begin_src js
+  firstName("John Q Public"); // => "John"
+  firstName("Admiral General Grace Murray Hopper"); // => "Grace"
+  firstName("Spot"); // => "Spot"
+#+end_src
+
+Then, tackle transforming the array names into an array of just first names.
+Your output should be:
+
+#+begin_src js
+  [ 'John',
+    'Grace',
+    'Spot',
+    'Aristotle',
+    'Bertrand',
+    'Laurence',
+    'William',
+    'Annyeong',
+    'Scarlet' ]
+#+end_src
