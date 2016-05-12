@@ -2,4 +2,4 @@
 
 ** Problem Sets
 
-+ [[problems/set-one.js][Set One]]
++ [[problems/set-one.org][Set One]]
