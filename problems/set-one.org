@@ -52,7 +52,7 @@ For example:
 
 #+begin_src js
 obfuscate("dog"); // => "1fd3uxbo2qdg"
-obfuscate("dog"); // => "4ncvad1bo3gplg""
+obfuscate("dog"); // => "4ncvad1bo3gplg"
 #+end_src
 
 *** 3. Deobfuscate a String (depends on problem 2)
